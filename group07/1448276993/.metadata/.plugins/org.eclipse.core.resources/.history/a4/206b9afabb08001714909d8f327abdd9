@@ -1,0 +1,116 @@
+package com.FirstPro;
+
+import static org.junit.Assert.*;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
+public class LinkedListTest {
+	private LinkedList l;
+	@Before
+	public void setUp() throws Exception {
+		l=new LinkedList();
+	}
+
+	@After
+	public void tearDown() throws Exception {
+	}
+
+	/*@Test
+	public void testAddObject() {
+		l.add(1);
+		l.add(2);
+		int sizeTest = l.size();
+		for(int i=0;i<l.size();i++){
+			System.out.println(l.get(i));
+		}
+		//assertEquals(2, sizeTest);
+		//assertEquals(1,l.get(0));
+	}
+
+	@Test
+	public void testAddIntObject() {
+		l.add(1);
+		l.add(2);
+		l.add(3);
+		l.add(1,4);
+		for(int i=0;i<l.size();i++){
+			System.out.println(l.get(i));
+		}
+	}
+
+	@Test
+	public void testGet() {
+		
+	}
+
+	@Test
+	public void testRemove() {
+		l.add(1);
+		l.add(2);
+		l.add(3);
+		l.add(1,4);
+		for(int i=0;i<l.size();i++){
+			System.out.println(l.get(i));
+		}
+		l.remove(1);
+		for(int i=0;i<l.size();i++){
+			System.out.println(l.get(i));
+		}
+	}
+
+	@Test
+	public void testSize() {
+	
+	}
+
+	@Test
+	public void testAddFirst() {
+		l.add(1);
+		l.add(2);
+		l.add(3);
+		l.add(1,4);
+		l.addFirst(5);
+		for(int i=0;i<l.size();i++){
+			System.out.println(l.get(i));
+		}
+	}
+
+	@Test
+	public void testAddLast() {
+		l.add(1);
+		l.add(2);
+		l.add(3);
+		l.add(1,4);
+		l.addLast(5);
+		for(int i=0;i<l.size();i++){
+			System.out.println(l.get(i));
+		}
+	}
+
+	@Test
+	public void testRemoveFirst() {
+		l.add(1);
+		l.add(2);
+		l.add(3);
+		l.add(1,4);
+		l.removeFirst();
+		for(int i=0;i<l.size();i++){
+			System.out.println(l.get(i));
+		}
+	}*/
+
+	@Test
+	public void testRemoveLast() {
+		l.add(1);
+		l.add(2);
+		l.add(3);
+		l.add(1,4);
+		l.removeLast();
+		for(int i=0;i<l.size();i++){
+			System.out.println(l.get(i));
+		}
+	}
+
+}

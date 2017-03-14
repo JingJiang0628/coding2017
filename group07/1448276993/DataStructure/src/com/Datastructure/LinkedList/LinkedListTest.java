@@ -1,0 +1,151 @@
+package com.Datastructure.LinkedList;
+
+import static org.junit.Assert.*;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
+public class LinkedListTest {
+
+	private LinkedList l;
+	@Before
+	public void setUp() throws Exception {
+		l=new LinkedList();
+	}
+
+	@After
+	public void tearDown() throws Exception {
+	}
+
+	@Test
+	public void testReverse() {
+		l.add(1);
+		l.add(2);
+		l.add(3);
+		l.add(4);
+		l.reverse();
+		for(int i=0;i<l.size();i++){
+			System.out.println(l.get(i));
+		}
+	}
+
+	@Test
+	public void testRemoveFirstHalf() {
+		l.add(1);
+		l.add(2);
+		l.add(3);
+		l.add(4);
+		l.removeFirstHalf();
+		for(int i=0;i<l.size();i++){
+			System.out.println(l.get(i));
+		}
+	}
+
+	@Test
+	public void testRemoveIntInt() {
+		l.add(1);
+		l.add(2);
+		l.add(3);
+		l.add(4);
+		l.remove(1,2);
+		for(int i=0;i<l.size();i++){
+			System.out.println(l.get(i));
+		}
+	}
+
+	@Test
+	public void testGetElements() {
+		l.add(11);
+		l.add(101);
+		l.add(201);
+		l.add(301);
+		l.add(401);
+		l.add(501);
+		l.add(601);
+		l.add(701);
+		l.add(801);
+		LinkedList list = new LinkedList();
+		list.add(1);
+		list.add(3);
+		list.add(4);
+		list.add(6);
+		int a[]=l.getElements(list);
+		for(int i=0;i<a.length;i++){
+			System.out.println(a[i]);
+		}
+	}
+
+	@Test
+	public void testSubtract() {
+		l.add(11);
+		l.add(1);
+		l.add(6);
+		l.add(3);
+		l.add(7);
+		LinkedList list = new LinkedList();
+		list.add(1);
+		list.add(5);
+		list.add(4);
+		list.add(6);
+		for(int i=0;i<l.size();i++){
+			System.out.println(l.get(i));
+		}
+		l.subtract(list);
+		for(int i=0;i<l.size();i++){
+			System.out.println(l.get(i));
+		}
+	}
+
+	@Test
+	public void testRemoveDuplicateValues() {
+		l.add(1);
+		l.add(6);
+		l.add(3);
+		l.add(6);
+		l.add(6);
+		l.add(11);
+		l.add(5);
+		l.add(3);
+		l.add(17);
+		l.removeDuplicateValues();
+		for(int i=0;i<l.size();i++){
+			System.out.println(l.get(i));
+		}
+	}
+
+	@Test
+	public void testRemoveRange() {
+		l.add(11);
+		l.add(101);
+		l.add(201);
+		l.add(301);
+		l.add(401);
+		l.add(501);
+		l.add(601);
+		l.add(701);
+		l.add(801);
+		l.removeRange(200, 500);
+		for(int i=0;i<l.size();i++){
+			System.out.println(l.get(i));
+		}
+	}
+
+	@Test
+	public void testIntersection() {
+		l.add(11);
+		l.add(1);
+		l.add(6);
+		l.add(3);
+		l.add(7);
+		LinkedList list = new LinkedList();
+		list.add(1);
+		list.add(5);
+		list.add(4);
+		list.add(6);
+		for(int i=0;i<l.intersection(list).size();i++){
+			System.out.println(l.intersection(list).get(i));
+		}
+	}
+
+}
